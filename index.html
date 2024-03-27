@@ -25,10 +25,40 @@
       <button class="btn btn-success add-task" data-bs-toggle="modal" data-bs-target="#formModal">Add Task</button>
     </div>
     <!-- Todo: Create a modal with a form to add tasks -->
+    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="formModalLabel">Add New Task</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="task-form">
+              <div class="row">
+              <div class="mb-3">
+                <label for="task-title" class="form-label">Title:</label>
+                <input type="text" class="form-control" id="task-title" required>
+              </div>
+              <div class="mb-3">
+                <label for="task-description" class="form-label">Description:</label>
+                <textarea class="form-control" id="task-description" rows="3" required></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="task-deadline" class="form-label">Deadline:</label>
+                <input type="date" class="form-control" id="task-deadline" required>
+              </div>
+            </div>
+              <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save Task</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="row swim-lanes text-center justify-content-between">
 
       <div class="col-12 col-lg-4 d-flex">
-        <div id="to-do" class="card border-light mb-3 lane flex-grow-1">
+        <div id="to-do" class="card border-light mb-3 lane flex-grow-1 task-board">
           <div class="card-header bg-white">
             <h2 class="card-title mb-1">To Do</h2>
           </div>
